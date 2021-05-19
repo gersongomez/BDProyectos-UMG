@@ -54,15 +54,16 @@ CREATE TABLE IF NOT EXISTS `hoteleria`.`tbl_mantenimiento_habitaciones` (
   `piso_habitaciones` INT NULL DEFAULT NULL,
   `estado_habitacion` INT NULL DEFAULT NULL,
   `tipo_de_habitacion` VARCHAR(20) NULL DEFAULT NULL,
+   `cantidad_maxima_pers` VARCHAR(20) NULL DEFAULT NULL,
   PRIMARY KEY (`PK_id_habitacion`),
   FOREIGN KEY (`piso_habitaciones`) REFERENCES `tbl_piso_hotel`(`PK_numero_piso`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
-INSERT INTO `hoteleria`.`tbl_mantenimiento_habitaciones` (`PK_id_habitacion`, `descripcion_habitacion`, `precio_habitacion`, `piso_habitaciones`, `estado_habitacion`, `tipo_de_habitacion`) VALUES ('1', 'Habitación pequeña', '250', '1', '1', 'Matrimonial');
-INSERT INTO `hoteleria`.`tbl_mantenimiento_habitaciones` (`PK_id_habitacion`, `descripcion_habitacion`, `precio_habitacion`, `piso_habitaciones`, `estado_habitacion`, `tipo_de_habitacion`) VALUES ('2', 'Habitación pequeña', '250', '1', '1', 'Individual');
-INSERT INTO `hoteleria`.`tbl_mantenimiento_habitaciones` (`PK_id_habitacion`, `descripcion_habitacion`, `precio_habitacion`, `piso_habitaciones`, `estado_habitacion`, `tipo_de_habitacion`) VALUES ('3', 'Habitación pequeña', '250', '1', '1', 'Matrimonial');
-INSERT INTO `hoteleria`.`tbl_mantenimiento_habitaciones` (`PK_id_habitacion`, `descripcion_habitacion`, `precio_habitacion`, `piso_habitaciones`, `estado_habitacion`, `tipo_de_habitacion`) VALUES ('4', 'Habitación pequeña', '250', '1', '1', 'Individual');
-INSERT INTO `hoteleria`.`tbl_mantenimiento_habitaciones` (`PK_id_habitacion`, `descripcion_habitacion`, `precio_habitacion`, `piso_habitaciones`, `estado_habitacion`, `tipo_de_habitacion`) VALUES ('5', 'Habitación pequeña', '250', '1', '1', 'Matrimonial');
+INSERT INTO `hoteleria`.`tbl_mantenimiento_habitaciones` (`PK_id_habitacion`, `descripcion_habitacion`, `precio_habitacion`, `piso_habitaciones`, `estado_habitacion`, `tipo_de_habitacion`,`cantidad_maxima_pers`) VALUES ('1', 'Habitación pequeña', '250', '1', '1', 'Matrimonial','4 personas');
+INSERT INTO `hoteleria`.`tbl_mantenimiento_habitaciones` (`PK_id_habitacion`, `descripcion_habitacion`, `precio_habitacion`, `piso_habitaciones`, `estado_habitacion`, `tipo_de_habitacion`,`cantidad_maxima_pers`) VALUES ('2', 'Habitación pequeña', '250', '1', '1', 'Individual','4 personas');
+INSERT INTO `hoteleria`.`tbl_mantenimiento_habitaciones` (`PK_id_habitacion`, `descripcion_habitacion`, `precio_habitacion`, `piso_habitaciones`, `estado_habitacion`, `tipo_de_habitacion`,`cantidad_maxima_pers`) VALUES ('3', 'Habitación pequeña', '250', '1', '1', 'Matrimonial','4 personas');
+INSERT INTO `hoteleria`.`tbl_mantenimiento_habitaciones` (`PK_id_habitacion`, `descripcion_habitacion`, `precio_habitacion`, `piso_habitaciones`, `estado_habitacion`, `tipo_de_habitacion`,`cantidad_maxima_pers`) VALUES ('4', 'Habitación pequeña', '250', '1', '1', 'Individual','4 personas');
+INSERT INTO `hoteleria`.`tbl_mantenimiento_habitaciones` (`PK_id_habitacion`, `descripcion_habitacion`, `precio_habitacion`, `piso_habitaciones`, `estado_habitacion`, `tipo_de_habitacion`,`cantidad_maxima_pers`) VALUES ('5', 'Habitación pequeña', '250', '1', '1', 'Matrimonial','4 personas');
 
 -- -----------------------------------------------------
 -- Table `hoteleria`.`tbl_metodos_de_pago`
@@ -121,7 +122,6 @@ INSERT INTO `hoteleria`.`tbl_servicios` (`PK_id_servicio`, `nombre_servicio`, `d
 INSERT INTO `hoteleria`.`tbl_servicios` (`PK_id_servicio`, `nombre_servicio`, `descripcion_servicio`, `precio_servicio`, `tipo_servicio`, `estado_servicio`) VALUES ('3', 'Paseo en bote', 'Espectuaculo en bote', '375', '1', '1');
 INSERT INTO `tbl_servicios` (`PK_id_servicio`, `nombre_servicio`, `descripcion_servicio`, `precio_servicio`, `tipo_servicio`, `estado_servicio`) VALUES ('4', 'SPA', 'SPA para un máximo de 10 personas', '500', '1', '2');
 INSERT INTO `tbl_servicios` (`PK_id_servicio`, `nombre_servicio`, `descripcion_servicio`, `precio_servicio`, `tipo_servicio`, `estado_servicio`) VALUES ('5', 'Sector para Fumadores', 'Amplio sector para personas puedan fumar tranquilamente sin molestar a otras personas', '150', '2', '1');
-
 
 -- -----------------------------------------------------
 -- Table `hoteleria`.`tbl_reservaciones`
